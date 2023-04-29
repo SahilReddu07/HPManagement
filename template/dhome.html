@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home page</title>
+    <style>
+      /* Remove default margin and padding from body */
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      /* Style the header */
+      header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        width: 100%;
+        background-color: lightgray;
+      }
+
+      /* Style the heading */
+      h1 {
+        font-size: 48px;
+        font-weight: bold;
+        text-align: center;
+        margin: 0;
+      }
+
+      /* Style the buttons */
+      button {
+        font-size: 36px;
+        padding: 20px 40px;
+        margin: 8px 0;
+      }
+
+      /* Style the footer */
+      footer {
+        background-color: blue;
+        color: white;
+        padding: 16px;
+        width: 100%;
+        height: 50px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Home Page</h1>
+    </header>
+
+  	<button id="myButton">Referral</button>
+	<script>
+		document.getElementById("myButton").addEventListener("click", function() {
+			window.location.href = "http://127.0.0.1:8000/refferal";
+		});
+	</script>
+    <button id="myButton2">History</button>
+	<script>
+		document.getElementById("myButton2").addEventListener("click", function() {
+			window.location.href = "http://127.0.0.1:8000/hhome";
+		});
+	</script>
+
+    <footer>
+
+    </footer>
+  </body>
+</html>
