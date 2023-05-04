@@ -7,11 +7,8 @@
       body {
         margin: 0;
         padding: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
+        background-image: url('https://img.freepik.com/free-photo/beautiful-view-greenery-bridge-forest-perfect-background_181624-17827.jpg?w=2000');
+        background-size: cover;
       }
 
       /* Style the header */
@@ -21,7 +18,10 @@
         align-items: center;
         height: 100px;
         width: 100%;
-        background-color: lightgray;
+        background-color: rgba(255, 255, 255, 0.7);
+        position: fixed;
+        top: 0;
+        left: 0;
       }
 
       /* Style the heading */
@@ -33,10 +33,28 @@
       }
 
       /* Style the buttons */
+      .button-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: calc(100vh - 100px);
+      }
+
       button {
-        font-size: 36px;
-        padding: 20px 40px;
+        font-size: 24px;
+        padding: 16px 32px;
         margin: 8px 0;
+        background-color: blue;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: darkblue;
       }
 
       /* Style the footer */
@@ -57,9 +75,15 @@
       <h1>Home Page</h1>
     </header>
 
-    <button onclick="button1Clicked()">Today's Entry</button>
-    <br>
-    <button onclick="button2Clicked()">History Entries</button>
+    <div class="button-container">
+      <button onclick="button1Clicked()">Today's Entry</button>
+      <br>
+      <button onclick="button2Clicked()">History Entries</button>
+    </div>
+
+    <footer>
+
+    </footer>
 
     <script>
       function button1Clicked() {
@@ -70,9 +94,5 @@
         alert("You clicked Button 2!");
       }
     </script>
-
-    <footer>
-
-    </footer>
   </body>
 </html>
