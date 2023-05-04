@@ -1,68 +1,137 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Referral Page</title>
-    <style>
-      /* Center the form on the screen */
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-      }
-      form {
-        max-width: 500px;
-        width: 100%;
-        padding: 20px;
-        background-color: #f5f5f5;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      }
-      /* Style the blue footer */
-      footer {
-        background-color: #007bff;
-        color: #fff;
-        text-align: center;
-        padding: 20px;
-        height: 50px;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-      }
-    </style>
-    <script>
-      // Validate the patient number field
-      function validatePatientNumber(event) {
-        const input = event.target;
-        const value = input.value;
-        const valid = /^\d+$/.test(value); // Check if the value contains only digits
-        if (!valid) {
-          alert('Please enter only numbers in the patient number field.');
-          input.value = ''; // Clear the input field
-        }
-      }
-      window.addEventListener('DOMContentLoaded', function() {
-        const patientNumberInput = document.getElementById('patient_number');
-        patientNumberInput.addEventListener('input', validatePatientNumber);
-      });
-    </script>
-  </head>
-  <body>
-    <form action="submit.php" method="post">
-      <h1><strong>Referral Page</strong></h1>
-      <label for="patient_name">Patient Name:</label>
-      <input type="text" id="patient_name" name="patient_name"><br><br>
-      <label for="patient_number">Patient Number:</label>
-      <input type="text" id="patient_number" name="patient_number"><br><br>
-      <label for="patient_diagnosis">Patient Diagnosis:</label>
-      <input type="text" id="patient_diagnosis" name="patient_diagnosis"><br><br>
-      <label for="patient_problem">Patient Problem:</label>
-      <input type="text" id="patient_problem" name="patient_problem"><br><br>
-      <label for="referral_date">Date of Referring:</label>
-      <input type="date" id="referral_date" name="referral_date"><br><br>
-      <input type="submit" value="Submit">
-    </form>
-    <footer>
-    </footer>
-  </body>
-</html>
+<!DOCTYPE HTML>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initital-scale=1.0">
+            <link rel="stylesheet" href="style.css">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+            <title>REFERRAL FORM</title>
+        <style>
+          *{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family: 'Poppins';
+}
+
+.hero{
+    width:100%;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background: #060c3f;
+}
+
+form{
+    background:#fff;
+    width:500px;
+    padding:30px;
+    font-size: 18px;
+}
+
+.message-icon{
+    display:flex;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.message-icon i{
+    font-size:40px;
+}
+
+.message-icon span{
+    font-size: 22px;
+    font-weight: bold;
+    margin-left:15px;
+}
+
+form input,textarea{
+    width:100%;
+    border-top: none;
+    border-left: none;
+    border-right:none;
+    border-bottom: 1px solid #000;
+    outline:none;
+}
+
+#input-field{
+    padding-bottom: 20px;
+    display:flex;
+    align-items: center;
+}
+
+#input-field i{
+    font-size: 22px;
+    margin-right: 15px;
+}
+
+.send-btn{
+    width:100px;
+    border: none;
+    background: #000;
+    color:#fff;
+    font-size: 16px;
+    padding:6px 0;
+    border-radius: 50px;
+}
+        </style>
+        </head>
+        <body>
+            <div class="hero">
+            <form action="https://formspree.io/f/xpzebjlk" method="post">
+                <div class="message-icon">
+                    <i class="bi bi-telegram"></i>
+                    <span>Referral form</span>
+                </div>
+
+                <div id="input-feild1">
+                    <i class=""></i>
+                    <input type="text" placeholder="Patient's Name" name="Name">
+                </div>
+                <div id="input-feild2">
+                    <i class="bi bi-telephone"></i>
+                    <input type="text" placeholder="Patient's Phone No." name="Phone">
+                </div>
+                <div id="input-feild3">
+                    <i class="bi bi-envelope"></i>
+                    <input type="text" placeholder="Patient's Email Address" name="text">
+                </div>
+                <div id="input-feild4">
+                    <i class="bi bi-chat-right-dots"></i>
+                    <textarea Name="Symptoms" placeholder="Symptoms" rows="3"></textarea>
+                </div>
+                <div id="input-feild5">
+                    <i class="bi bi-chat-right-dots"></i>
+                    <textarea Name="Problem Identified" placeholder="Problem Identified" rows="1"></textarea>
+                </div>
+                <div id="input-feild6">
+                    <i class="bi bi-chat-right-dots"></i>
+                    <textarea Name="Diagnosis" placeholder="Diagnosis done" rows="2"></textarea>
+                </div>
+                <div id="input-feild7">
+                    <i class="bi bi-date"></i>
+                    <input type="date" placeholder="Date of Referring" name="date">
+                </div>
+                <div id="input-feild8">
+                    <i class="message-icon"></i>
+                    <input type="text" placeholder="Referred by" name="Name">
+                </div>
+                <div id="input-feild9">
+                    <i class="bi bi-telephone"></i>
+                    <input type="text" placeholder="Doctor's Phone No." name="Phone">
+                </div>
+                <div id="input-feild">
+                    <i class="bi bi-envelope"></i>
+                    <input type="text" placeholder="Doctor's Email Address" name="text">
+                </div>
+
+                <input type="Submit" value="Submit" class="send-btn">
+
+            </form>
+            </div>
+        </body>
+
+
+</HTML>
