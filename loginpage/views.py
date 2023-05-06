@@ -13,3 +13,7 @@ def refferal(request):
     return render(request,'refferal.html')
 def history(request):
     return render(request,'history.html')
+def thistory(request):
+    return render(request,'thistory.html')
+def dhistory(request):
+    return render(request,'dhistory.html')
