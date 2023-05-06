@@ -75,24 +75,23 @@
       <h1>Home Page</h1>
     </header>
 
-    <div class="button-container">
-      <button onclick="button1Clicked()">Today's Entry</button>
-      <br>
-      <button onclick="button2Clicked()">History Entries</button>
+   <div class="button-container">
+      <button id="myButton">Today's History</button>
+	<script>
+		document.getElementById("myButton").addEventListener("click", function() {
+			window.location.href = "http://127.0.0.1:8000/refferal";
+		});
+	</script>
+    <button id="myButton2">History Entries</button>
+	<script>
+		document.getElementById("myButton2").addEventListener("click", function() {
+			window.location.href = "https://healthcare-services.onrender.com/history";
+		});
+	</script>
     </div>
-
     <footer>
 
     </footer>
 
-    <script>
-      function button1Clicked() {
-        alert("You clicked Button 1!");
-      }
-
-      function button2Clicked() {
-        alert("You clicked Button 2!");
-      }
-    </script>
   </body>
 </html>
