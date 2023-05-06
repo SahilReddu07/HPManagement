@@ -11,3 +11,5 @@ def dhome(request):
     return render(request,'dhome.html')
 def refferal(request):
     return render(request,'refferal.html')
+def history(request):
+    return render(request,'history.html')
